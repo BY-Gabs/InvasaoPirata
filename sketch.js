@@ -9,7 +9,7 @@ var engine,
   pirateLaughSound,
   backgroundMusic,
   cannonExplosion;
-var canvas, angle, tower, ground, cannon, boat;
+var canvas, angle, tower, fire, ground, cannon, boat;
 var balls = [];
 var boats = [];
 var score = 0;
@@ -38,6 +38,7 @@ function preload() {
   brokenBoatSpritesheet = loadImage("assets/boat/broken_boat.png");
   waterSplashSpritedata = loadJSON("assets/water_splash/water_splash.json");
   waterSplashSpritesheet = loadImage("assets/water_splash/water_splash.png");
+  fire1Image = loadImage("./assets/fire.png");
 }
 
 function setup() {
@@ -47,6 +48,7 @@ function setup() {
   angle = -PI / 4;
   ground = new Ground(0, height - 1, width * 2, 1);
   tower = new Tower(150, 350, 160, 310);
+  fire = new Fire(1100,550,50,50);
   cannon = new Cannon(180, 110, 130, 100, angle);
 
   var boatFrames = boatSpritedata.frames;
@@ -81,6 +83,7 @@ function draw() {
   }
 
   Engine.update(engine);
+  
   ground.display();
 
   showBoats();
@@ -107,6 +110,8 @@ function draw() {
 
   cannon.display();
   tower.display();
+  fire.display();
+ 
 
   fill("#6d4c41");
   textSize(40);
@@ -184,6 +189,32 @@ function keyReleased() {
     balls[balls.length - 1].shoot();
   }
 }
+
+function fuego() {
+  if (!isGameOver) {
+    var cannonBall = new CannonBall(cannon.x, cannon.y);
+    cannonBall.trajectory = [];
+    Matter.Body.setAngle(cannonBall.body, cannon.angle);
+    balls.push(cannonBall);
+    cannonExplosion.play();
+    balls[balls.length - 1].shoot();
+  }
+}
+
+function btn_left() {
+  if (!isGameOver) {
+    cannon.angle -= 0.05;
+  }
+}
+
+function btn_right() {
+  if (!isGameOver) {
+    cannon.angle += 0.05;
+  }
+}
+
+
+
 
 function gameOver() {
   swal(

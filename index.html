@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- For iOS -->
+    <meta name="apple-mobile-web-app-title" content="Invasão Pirata"> <!-- This is the name of the app in the iOS home screen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- black-translucent, black-opaque, black-translucent-opaque, default, light-content, black-translucent-dark-content -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"> <!-- viewport-fit=cover is needed to make the page fit the screen -->
     <meta charset="utf-8" />
     <title>Invasão Pirata</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
@@ -24,8 +28,18 @@
     <script src="./js/Cannon.js"></script>
     <script src="./js/CannonBall.js"></script>
     <script src="./js/Boat.js"></script>
+    <script src="./js/fire.js"></script>
   </head>
   <body>
     <script src="sketch.js"></script>
+    <div class="icones1" >
+      <img src="assets/fire.png" width="10%" class="img-responsive" onclick="fuego();">
+    </div>
+    <div class="icones2" >
+      <img src="assets/left.png" width="10%" class="img-responsive2" onclick="btn_left();">
+    </div>
+    <div class="icones3" >
+      <img src="assets/right.png" width="10%" class="img-responsive3" onclick="btn_right();">
+    </div>
   </body>
 </html>
