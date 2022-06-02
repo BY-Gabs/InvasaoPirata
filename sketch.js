@@ -9,7 +9,7 @@ var engine,
   pirateLaughSound,
   backgroundMusic,
   cannonExplosion;
-var canvas, angle, tower, fire, ground, cannon, boat;
+var canvas, angle, tower, ground, cannon, boat;
 var balls = [];
 var boats = [];
 var score = 0;
@@ -25,6 +25,9 @@ var waterSplashSpritedata, waterSplashSpritesheet;
 var isGameOver = false;
 var isLaughing = false;
 
+var w = window.innerWidth; //alterações para publicação na PlayStore
+var h = window.innerHeight; //alterações para publicação na PlayStore
+
 function preload() {
   backgroundImg = loadImage("./assets/background.gif");
   backgroundMusic = loadSound("./assets/background_music.mp3");
@@ -38,18 +41,17 @@ function preload() {
   brokenBoatSpritesheet = loadImage("assets/boat/broken_boat.png");
   waterSplashSpritedata = loadJSON("assets/water_splash/water_splash.json");
   waterSplashSpritesheet = loadImage("assets/water_splash/water_splash.png");
-  fire1Image = loadImage("./assets/fire.png");
-}
+  }
 
 function setup() {
-  canvas = createCanvas(1200,600);
+  //canvas = createCanvas(1200,600);
+  createCanvas(w, h); //alterações para publicação na PlayStore
   engine = Engine.create();
   world = engine.world;
   angle = -PI / 4;
   ground = new Ground(0, height - 1, width * 2, 1);
-  tower = new Tower(150, 350, 160, 310);
-  fire = new Fire(1100,550,50,50);
-  cannon = new Cannon(180, 110, 130, 100, angle);
+  tower = new Tower(150, h-280, 160, 310); //alterações para publicação na PlayStore
+  cannon = new Cannon(180, h-495, 130, 100, angle,h,w); //alterações para publicação na PlayStore
 
   var boatFrames = boatSpritedata.frames;
   for (var i = 0; i < boatFrames.length; i++) {
@@ -110,8 +112,7 @@ function draw() {
 
   cannon.display();
   tower.display();
-  fire.display();
- 
+   
 
   fill("#6d4c41");
   textSize(40);
@@ -190,7 +191,7 @@ function keyReleased() {
   }
 }
 
-function fuego() {
+function fogo() {  //alterações para publicação na PlayStore
   if (!isGameOver) {
     var cannonBall = new CannonBall(cannon.x, cannon.y);
     cannonBall.trajectory = [];
@@ -201,13 +202,13 @@ function fuego() {
   }
 }
 
-function btn_left() {
+function btn_left() {  //alterações para publicação na PlayStore
   if (!isGameOver) {
     cannon.angle -= 0.05;
   }
 }
 
-function btn_right() {
+function btn_right() {  //alterações para publicação na PlayStore
   if (!isGameOver) {
     cannon.angle += 0.05;
   }
