@@ -51,7 +51,7 @@ function setup() {
   angle = -PI / 4;
   ground = new Ground(0, height - 1, width * 2, 1);
   tower = new Tower(120, h-50, 70, 180); //alterações para publicação na PlayStore
-  cannon = new Cannon(120, h-215, 130, 100, angle,h,w); //alterações para publicação na PlayStore
+  cannon = new Cannon(120, h-415, 130, 100, angle,h,w); //alterações para publicação na PlayStore
 
   var boatFrames = boatSpritedata.frames;
   for (var i = 0; i < boatFrames.length; i++) {
