@@ -1,8 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  align-items: center;  /* Alterações para publicação na PlayStore*/ 
-  display: flex;  /* Alterações para publicação na PlayStore*/ 
+  /* align-items: center;  Alterações para publicação na PlayStore*/ 
+  /* display: flex;  /* Alterações para publicação na PlayStore*/ 
    /*justify-content: center;  Alterações para publicação na PlayStore*/ 
 }
 
