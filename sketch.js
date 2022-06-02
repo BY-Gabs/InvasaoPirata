@@ -50,7 +50,7 @@ function setup() {
   world = engine.world;
   angle = -PI / 4;
   ground = new Ground(0, height - 1, width * 2, 1);
-  tower = new Tower(150, h-280, 160, 310); //alterações para publicação na PlayStore
+  tower = new Tower(150, h-280, 80, 150); //alterações para publicação na PlayStore
   cannon = new Cannon(180, h-495, 130, 100, angle,h,w); //alterações para publicação na PlayStore
 
   var boatFrames = boatSpritedata.frames;
