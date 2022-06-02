@@ -1,5 +1,5 @@
 class Cannon {
-  constructor(x, y, width, height, angle) {
+  constructor(x, y, width, height, angle,h,w) { //alterações para publicação na PlayStore
     this.x = x;
     this.y = y;
     this.width = width;
@@ -7,6 +7,7 @@ class Cannon {
     this.angle = angle;
     this.cannon_image = loadImage("assets/CANON.png");
     this.cannon_base = loadImage("assets/cannon_base.png");
+    this.collisionFilter = {group: -1,   category: 2,   mask: 0,}
   }
   display() {
     if (keyIsDown(RIGHT_ARROW) && this.angle < 0.1) {
@@ -24,7 +25,7 @@ class Cannon {
     imageMode(CENTER)
     image(this.cannon_image, 0, 0, this.width, this.height);
     pop();
-    image(this.cannon_base, 70, 20, 200, 200, PI, TWO_PI);
+    image(this.cannon_base, w-1005, h-600, 200, 200, PI, TWO_PI);  //alterações para publicação na PlayStore
     noFill();
   }
 }
