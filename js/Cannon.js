@@ -25,7 +25,7 @@ class Cannon {
     imageMode(CENTER)
     image(this.cannon_image, 0, 0, this.width, this.height);
     pop();
-    image(this.cannon_base, 105, 300, 200, 200, PI, TWO_PI);  //alterações para publicação na PlayStore
+    image(this.cannon_base, 132, h-235, 62, 62, PI, TWO_PI);  //alterações para publicação na PlayStore
     noFill();
   }
 }

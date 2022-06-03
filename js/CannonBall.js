@@ -6,7 +6,7 @@ class CannonBall {
       density: 1.0,
       isStatic: true
     };
-    this.r = 30;
+    this.r = 15;//alterações para publicação na PlayStore
     this.speed = 0.05;
     this.body = Bodies.circle(x, y, this.r, options);
     this.image = loadImage("./assets/cannonball.png");
@@ -27,7 +27,7 @@ class CannonBall {
 
     this.animation = waterSplashAnimation;
     this.speed = 0.05;
-    this.r = 150;
+    this.r = 50;//alterações para publicação na PlayStore
     setTimeout(() => {
       Matter.World.remove(world, this.body);
       balls.splice(index, 1);
@@ -38,7 +38,7 @@ class CannonBall {
     //adding new angle 
     var newAngle = cannon.angle - 0.5
     var velocity = p5.Vector.fromAngle(newAngle);
-    velocity.mult(20);
+    velocity.mult(15);
     Matter.Body.setStatic(this.body, false);
     Matter.Body.setVelocity(this.body, { x: velocity.x, y: velocity.y });
   }
@@ -57,7 +57,7 @@ class CannonBall {
 
     if (
       this.body.velocity.x > 0 &&
-      this.body.position.x > 300 &&
+      this.body.position.x > 150 && //alterações para publicação na PlayStore
       !this.isSink
     ) {
       var position = [this.body.position.x, this.body.position.y];
