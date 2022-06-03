@@ -23,7 +23,7 @@ html {
 .icones2  {
   position: fixed; /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
   bottom: 20px; /* Para deixar os botões na parte inferior da página é usado o bottom com um valor pequeno, no caso 2%. */
-  right: 490px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
+  right: 377px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
   padding: 1%; /* Aqui é inserido um pequeno espaço dentro do bloco.  */
   z-index: 10000000; /* O z-index é usado para uma ordenação do estilo, por isso aqui é usado um valor alto, para ficar por cima dos outros. */
 }
@@ -31,7 +31,7 @@ html {
 .icones3  {
   position: fixed; /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
   bottom: 20px; /* Para deixar os botões na parte inferior da página é usado o bottom com um valor pequeno, no caso 2%. */
-  right: 480px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
+  right: 300px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
   padding: 1%; /* Aqui é inserido um pequeno espaço dentro do bloco.  */
   z-index: 10000000; /* O z-index é usado para uma ordenação do estilo, por isso aqui é usado um valor alto, para ficar por cima dos outros. */
 }

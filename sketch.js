@@ -50,8 +50,8 @@ function setup() {
   world = engine.world;
   angle = -PI / 4;
   ground = new Ground(0, height - 1, width * 2, 1);
-  tower = new Tower(120, h-50, 70, 180); //alterações para publicação na PlayStore
-  cannon = new Cannon(120, h-415, 130, 100, angle,h,w); //alterações para publicação na PlayStore
+  tower = new Tower(160, h-121, 55, 130); //alterações para publicação na PlayStore
+  cannon = new Cannon(165, h-205, 60, 40, angle,h,w); //alterações para publicação na PlayStore
 
   var boatFrames = boatSpritedata.frames;
   for (var i = 0; i < boatFrames.length; i++) {
@@ -115,7 +115,7 @@ function draw() {
    
 
   fill("#6d4c41");
-  textSize(40);
+  textSize(30); //alterações para publicação na PlayStore
   text("Pontuação: "+score, width - 200, 50);
   textAlign(CENTER, CENTER);
 }
