@@ -10,6 +10,21 @@ html {
   height: 100%;     /* Alterações para publicação na PlayStore*/ 
 }
 
+* {
+  box-sizing: border-box;
+}
+
+#botoes::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
  /* Alterações para publicação na PlayStore*/ 
 .icones1  {
@@ -23,15 +38,16 @@ html {
 .icones2  {
   position: fixed; /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
   bottom: 20px; /* Para deixar os botões na parte inferior da página é usado o bottom com um valor pequeno, no caso 2%. */
-  right: 377px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
+  right: 207px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
   padding: 1%; /* Aqui é inserido um pequeno espaço dentro do bloco.  */
   z-index: 10000000; /* O z-index é usado para uma ordenação do estilo, por isso aqui é usado um valor alto, para ficar por cima dos outros. */
 }
 
 .icones3  {
+  float: right;/*teste*/
   position: fixed; /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
   bottom: 20px; /* Para deixar os botões na parte inferior da página é usado o bottom com um valor pequeno, no caso 2%. */
-  right: 300px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
+  right: 140px; /* Para deixar os botões na parte direita da página é usado o right com um valor pequeno, no caso 2%. */ 
   padding: 1%; /* Aqui é inserido um pequeno espaço dentro do bloco.  */
   z-index: 10000000; /* O z-index é usado para uma ordenação do estilo, por isso aqui é usado um valor alto, para ficar por cima dos outros. */
 }

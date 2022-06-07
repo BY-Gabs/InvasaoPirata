@@ -49,7 +49,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   angle = -PI / 4;
-  ground = new Ground(0, height - 1, width * 2, 1);
+  ground = new Ground(0, height - 1, width * 2, 1); //verificar
   tower = new Tower(160, h-121, 55, 130); //alterações para publicação na PlayStore
   cannon = new Cannon(165, h-205, 60, 40, angle,h,w); //alterações para publicação na PlayStore
 
