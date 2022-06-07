@@ -43,6 +43,28 @@ function preload() {
   waterSplashSpritesheet = loadImage("assets/water_splash/water_splash.png");
   }
 
+
+
+   //***********************************alterações para publicação na PlayStore
+  $(document).ready(function() {  
+    posicionaBotoes();
+  });
+  
+  function posicionaBotoes() {
+    var modal = $("#modal");
+    $(".botoes-modal-left").css('right', modal.offset().left + (w-80));
+    $(".botoes-modal-left").css('top', modal.offset().top + (h-70));
+
+    $(".botoes-modal-right").css('right', modal.offset().left + (w-150));
+    $(".botoes-modal-right").css('top', modal.offset().top + (h-70));
+
+    $(".botoes-modal-fire").css('right', modal.offset().left + 40);
+    $(".botoes-modal-fire").css('top', modal.offset().top + (h-70));
+  }
+ //***********************************alterações para publicação na PlayStore
+
+
+
 function setup() {
   //canvas = createCanvas(1200,600);
   createCanvas(w, h); //alterações para publicação na PlayStore
@@ -50,8 +72,8 @@ function setup() {
   world = engine.world;
   angle = -PI / 4;
   ground = new Ground(0, height - 1, width * 2, 1); //verificar
-  tower = new Tower(160, h-121, 55, 130); //alterações para publicação na PlayStore
-  cannon = new Cannon(165, h-205, 60, 40, angle,h,w); //alterações para publicação na PlayStore
+  tower = new Tower(70, h-121, 55, 130); //alterações para publicação na PlayStore
+  cannon = new Cannon(75, h-205, 60, 40, angle,h,w); //alterações para publicação na PlayStore
 
   var boatFrames = boatSpritedata.frames;
   for (var i = 0; i < boatFrames.length; i++) {
@@ -218,14 +240,11 @@ function btn_right() {  //alterações para publicação na PlayStore
 
 
 function gameOver() {
-  swal(
+  swal(//alterações para publicação na PlayStore
     {
       title: `Fim de Jogo!!!`,
       text: "Obrigado por jogar!!",
-      imageUrl:
-        "https://raw.githubusercontent.com/whitehatjr/PiratesInvasion/main/assets/boat.png",
-      imageSize: "150x150",
-      confirmButtonText: "Jogar Novamente"
+      confirmButtonText: "Jogar Novamente" 
     },
     function(isConfirm) {
       if (isConfirm) {
