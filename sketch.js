@@ -248,7 +248,7 @@ function gameOver() {
     },
     function(isConfirm) {
       if (isConfirm) {
-        document.location.reload(true);
+        window.location = "https://by-gabs.github.io/invasaoPirata/";
       }
     }
   );
