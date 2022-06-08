@@ -248,8 +248,7 @@ function gameOver() {
     },
     function(isConfirm) {
       if (isConfirm) {
-        location.reload();
-        return false;
+        document.location.reload(true);
       }
     }
   );
