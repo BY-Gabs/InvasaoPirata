@@ -248,7 +248,7 @@ function gameOver() {
     },
     function(isConfirm) {
       if (isConfirm) {
-        location.reload();
+        window.location.reload();
       }
     }
   );
